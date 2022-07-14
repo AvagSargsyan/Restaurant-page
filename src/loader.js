@@ -8,8 +8,9 @@ function loadFullPage() {
 
     const headerList = document.createElement('ul');
 
-    const headerItemLogo = document.createElement('li');
+    const headerItemLogo = document.createElement('div');
     headerItemLogo.innerText = 'Logo';
+    headerItemLogo.classList.add('logo');
     const headerItemHome = document.createElement('li');
     headerItemHome.innerText = 'HOME';
     const headerItemMenu = document.createElement('li');
@@ -18,11 +19,11 @@ function loadFullPage() {
     headerItemContact.innerText = 'CONTACT';
 
     // adding contents
-    headerList.appendChild(headerItemLogo);
     headerList.appendChild(headerItemHome);
     headerList.appendChild(headerItemMenu);
     headerList.appendChild(headerItemContact);
     
+    header.appendChild(headerItemLogo);
     header.appendChild(headerList);
     content.appendChild(header);
     
