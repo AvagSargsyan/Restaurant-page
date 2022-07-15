@@ -3,14 +3,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-    --main-bg-color: rgb(226, 111, 34);
-}
-
 body {
-    background-color: rgb(248, 243, 238);
+    background: url('./assets/images/bg-image\(credit:lily-banse\).jpg'), rgb(248, 243, 238);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+#content {
+    height: 100%;
 }
 
 li {
@@ -26,6 +30,7 @@ ul {
 
 /* header-start */
 #header {
+    height: 8%;
     background-color: #fff;
     padding: .6rem 4rem;
     display: flex;
@@ -38,12 +43,12 @@ ul {
 }
 
 #header ul li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 1rem;
 }
 
 #header ul li:hover {
-    background-color: var(--main-bg-color);
+    background-color: rgb(224, 110, 34);
     color: white;
     cursor: pointer;
     border-radius: .4rem;
@@ -54,3 +59,58 @@ ul {
 }
 /* header-end */
 
+/* main-start */
+
+/* add an animation for main content */
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#main {
+    height: 92%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    color: #fff;
+    background-color: rgba(8, 8, 8, 0.425);
+}
+
+#main-content {
+    padding: 0 5rem;
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+#main-content h1 {
+    font-size: 4.4rem;
+}
+
+#main-content p {
+    font-size: 1.3rem;
+}
+
+#main-content button {
+    color: #fff;
+    padding: 1em 1.8em;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: rgb(240, 87, 26);
+    border: none;
+    border-radius: .4rem;
+}
+
+#main-content button:hover {
+    background-color: rgb(163, 62, 22);
+}
+/* main-end */

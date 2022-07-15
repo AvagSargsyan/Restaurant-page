@@ -33,16 +33,20 @@ function loadFullPage() {
     main.setAttribute('id', 'main');
 
     const heading = document.createElement('h1');
-    heading.innerText = 'Welcome To Tasty Lunch Restaurant'
+    heading.innerHTML = 'Welcome To <br> Tasty Lunch Restaurant'
     const introduction = document.createElement('p');
-    introduction.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit reprehenderit quos molestias. Officia enim consectetur aliquid voluptatum minus! Magnam quisquam voluptatem officia consectetur nesciunt.'
+    introduction.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit reprehenderit quos molestias. <br>Officia enim consectetur aliquid voluptatum minus! Magnam quisquam voluptatem officia consectetur nesciunt.'
     const reserveBtn = document.createElement('button');
     reserveBtn.innerText = 'RESERVATION';
+    const mainContent = document.createElement('div');
+    mainContent.setAttribute('id', 'main-content');
 
     // adding contents
-    main.appendChild(heading);
-    main.appendChild(introduction);
-    main.appendChild(reserveBtn);
+    mainContent.appendChild(heading);
+    mainContent.appendChild(introduction);
+    mainContent.appendChild(reserveBtn);
+
+    main.appendChild(mainContent);
 
     content.appendChild(main);
 
@@ -66,7 +70,7 @@ function loadFullPage() {
     footer.appendChild(authorInfo);
     footer.appendChild(githubLink);
     
-    content.appendChild(footer);
+    main.appendChild(footer);
 }
 
 export {
