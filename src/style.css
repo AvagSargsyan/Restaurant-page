@@ -61,10 +61,10 @@ ul {
 
 /* main-start */
 
-/* add an animation for main content */
+/* add an animation for content */
 @keyframes moveDown {
     from {
-        transform: translateY(-100px);
+        transform: translateY(-50px);
     }
     to {
         transform: translateY(0);
@@ -78,7 +78,7 @@ ul {
     flex-flow: column nowrap;
     align-items: flex-start;
     color: #fff;
-    background-color: rgba(8, 8, 8, 0.425);
+    background-color: rgba(8, 8, 8, 0.514);
 }
 
 #main-content {
@@ -126,3 +126,31 @@ ul {
     padding-right: .8rem;
 }
 /* footer-end */
+
+/* menu-start */
+#menu-container {
+    padding: 1rem;
+    text-align: center;
+    height: 93%;
+    background-color: rgba(8, 8, 8, 0.719);
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+#menu-container > div {
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+#menu-container > div > h2 {
+    font-size: 2.6rem;
+    color: rgb(240, 87, 26);
+}
+
+
+#menu-container > div > p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+/* menu-end */
