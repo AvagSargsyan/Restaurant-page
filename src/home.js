@@ -1,36 +1,8 @@
 import Icon from './assets/icons/github.svg';
 
-function loadFullPage() {
-    // header section
-    // creating contents
-    const content = document.querySelector('#content');
-
-    const header = document.createElement('div');
-    header.setAttribute('id', 'header');
-
-    const headerList = document.createElement('ul');
-
-    const headerItemLogo = document.createElement('div');
-    headerItemLogo.innerText = 'Logo';
-    headerItemLogo.classList.add('logo');
-    const headerItemHome = document.createElement('li');
-    headerItemHome.innerText = 'HOME';
-    const headerItemMenu = document.createElement('li');
-    headerItemMenu.innerText = 'MENU';
-    const headerItemContact = document.createElement('li');
-    headerItemContact.innerText = 'CONTACT';
-
-    // adding contents
-    headerList.appendChild(headerItemHome);
-    headerList.appendChild(headerItemMenu);
-    headerList.appendChild(headerItemContact);
-    
-    header.appendChild(headerItemLogo);
-    header.appendChild(headerList);
-    content.appendChild(header);
+function createHomeSection() {
     
     // main section
-    // creating contents
     const main = document.createElement('div');
     main.setAttribute('id', 'main');
 
@@ -43,17 +15,12 @@ function loadFullPage() {
     const mainContent = document.createElement('div');
     mainContent.setAttribute('id', 'main-content');
 
-    // adding contents
     mainContent.appendChild(heading);
     mainContent.appendChild(introduction);
     mainContent.appendChild(reserveBtn);
-
     main.appendChild(mainContent);
 
-    content.appendChild(main);
-
     // footer section
-    // adding contents
     const footer = document.createElement('footer');
     footer.setAttribute('id', 'footer');
 
@@ -66,15 +33,15 @@ function loadFullPage() {
     // load the github logo
     const myIcon = new Image();
     myIcon.src = Icon;
-
     githubLink.appendChild(myIcon);
 
     footer.appendChild(authorInfo);
     footer.appendChild(githubLink);
-    
     main.appendChild(footer);
+
+    return [main, reserveBtn];
 }
 
 export {
-    loadFullPage
+    createHomeSection
 };

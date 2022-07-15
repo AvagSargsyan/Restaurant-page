@@ -123,9 +123,6 @@ ul {
     align-items: center;
     gap: .4rem;
     justify-content: flex-end;
-}
-
-#footer a img {
-    margin-right: .8rem;
+    padding-right: .8rem;
 }
 /* footer-end */
