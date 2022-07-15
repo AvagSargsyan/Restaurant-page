@@ -30,7 +30,7 @@ ul {
 
 /* header-start */
 #header {
-    height: 8%;
+    height: 7%;
     background-color: #fff;
     padding: .6rem 4rem;
     display: flex;
@@ -73,7 +73,7 @@ ul {
 }
 
 #main {
-    height: 92%;
+    height: 93%;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -114,3 +114,18 @@ ul {
     background-color: rgb(163, 62, 22);
 }
 /* main-end */
+
+/* footer-start */
+#footer {
+    width: 100%;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    justify-content: flex-end;
+}
+
+#footer a img {
+    margin-right: .8rem;
+}
+/* footer-end */

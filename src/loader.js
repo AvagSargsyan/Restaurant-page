@@ -1,3 +1,5 @@
+import Icon from './assets/icons/github.svg';
+
 function loadFullPage() {
     // header section
     // creating contents
@@ -58,14 +60,14 @@ function loadFullPage() {
     const authorInfo = document.createElement('p');
     authorInfo.innerHTML = 'Copyright &copy; 2022 AvagSargsyan';
     const githubLink = document.createElement('a');
+    githubLink.setAttribute('href', 'https://github.com/AvagSargsyan');
+    githubLink.setAttribute('target', '_blank');
 
-    // try to load the github logo later
-    
-    // const githubLogo = document.createElement('img');
-    // githubLogo.setAttribute('src', '#');
+    // load the github logo
+    const myIcon = new Image();
+    myIcon.src = Icon;
 
-    // adding contents
-    // githubLink.appendChild(githubLogo);
+    githubLink.appendChild(myIcon);
 
     footer.appendChild(authorInfo);
     footer.appendChild(githubLink);
