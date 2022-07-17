@@ -25,6 +25,11 @@ function createPageContents() {
         content.appendChild(menu);
     });
 
+    reserveBtn.addEventListener('click', e => {
+        homeSection.remove();
+        content.appendChild(menu);
+    });
+
 };
 
 createPageContents();
