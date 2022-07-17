@@ -4,7 +4,6 @@ import { createMenu } from './menu';
 import { createContactPage } from './contact';
 import './style.css';
 
-
 function createPageContents() {
     const content = document.querySelector('#content');
     
@@ -17,8 +16,6 @@ function createPageContents() {
     const menu = createMenu();
 
     const contact = createContactPage();
-
-    // const contentChildren = document.querySelectorAll('#content > div');
 
     homeBtn.addEventListener('click', e => {
         while (content.childNodes.length > 1) {
