@@ -1,6 +1,7 @@
 import { createHeader } from './header';
 import { createHomeSection } from './home';
 import { createMenu } from './menu';
+import { createContactPage } from './contact';
 import './style.css';
 
 
@@ -15,20 +16,37 @@ function createPageContents() {
 
     const menu = createMenu();
 
+    const contact = createContactPage();
+
+    // const contentChildren = document.querySelectorAll('#content > div');
+
     homeBtn.addEventListener('click', e => {
-        menu.remove();
+        while (content.childNodes.length > 1) {
+            content.removeChild(content.lastChild);
+        }
         content.appendChild(homeSection);
     })
 
     menuBtn.addEventListener('click', e => {
-        homeSection.remove();
+        while (content.childNodes.length > 1) {
+            content.removeChild(content.lastChild);
+        }
         content.appendChild(menu);
     });
 
     reserveBtn.addEventListener('click', e => {
-        homeSection.remove();
+        while (content.childNodes.length > 1) {
+            content.removeChild(content.lastChild);
+        }
         content.appendChild(menu);
     });
+
+    contactBtn.addEventListener('click', e => {
+        while (content.childNodes.length > 1) {
+            content.removeChild(content.lastChild);
+        }
+        content.appendChild(contact);
+    })
 
 };
 

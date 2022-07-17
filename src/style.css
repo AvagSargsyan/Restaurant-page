@@ -143,6 +143,10 @@ ul {
     margin: 0;
     animation: moveDown 1s ease-in-out forwards;
     opacity: 0;
+    text-decoration: underline;
+    text-decoration-color: rgb(240, 87, 26);
+    text-decoration-thickness: 2px;
+    text-underline-offset: .6rem;
 }
 
 #menu-item-container {
