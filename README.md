@@ -1,6 +1,6 @@
 # Restaurant page
 
-  A dynamic restaurant website built with HTML, CSS, JS and Webpack. It uses JS to dynamically render the content's (HTML code is generated with JS).
+  A dynamic restaurant website built with HTML, CSS, JS and Webpack. It uses JS to dynamically render the contents (HTML code is generated with JS).
 
 ## Authors
   This project is created by [me](https://github.com/AvagSargsyan) during [The Odin Project](https://www.theodinproject.com/) Full stack developer curriculum.(The design is also created by me).
